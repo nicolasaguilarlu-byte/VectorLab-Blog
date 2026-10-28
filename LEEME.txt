@@ -1,0 +1,31 @@
+VECTORLAB — plantilla de sitio escolar
+
+ARCHIVOS
+- index.html: portada con enlaces a los seis temas
+- tema1-rectangulares.html ... tema6-unitario.html: una página por tema
+- acerca.html: datos y propósito del proyecto
+- estilos.css: diseño blanco y celeste, adaptable a móvil
+
+PERSONALIZACIÓN
+1. Reemplaza [Escribe aquí...] y demás indicaciones con tus propias explicaciones.
+2. Añade nombre completo, curso y paralelo.
+3. Revisa los conceptos con tu cuaderno y los documentos del aula virtual.
+4. Si necesitas modificar el texto, abre cada HTML con un editor de texto/código (por ejemplo, Visual Studio Code) y guarda los cambios.
+Nota: los cuadros contenteditable solo permiten probar cambios localmente en el navegador; no guardan automáticamente ni actualizan el sitio publicado. Edita los archivos HTML para que los cambios queden guardados.
+
+PUBLICACIÓN GRATIS CON GITHUB PAGES
+1. Entra a https://github.com/ y crea/inicia sesión en una cuenta.
+2. Crea un repositorio público, por ejemplo: vectorlab-blog.
+3. Sube todos los archivos y carpetas del sitio a la raíz del repositorio (index.html debe estar en la raíz).
+4. En el repositorio, abre Settings > Pages.
+5. En Build and deployment, selecciona Deploy from a branch. Elige la rama main y la carpeta /(root), y guarda.
+6. Espera a que GitHub Pages publique el sitio. La URL normalmente tiene la forma:
+   https://TU-USUARIO.github.io/vectorlab-blog/
+   Sustituye TU-USUARIO por tu nombre de usuario real. No envíes esta URL hasta comprobar que funciona.
+7. Abre el enlace en una ventana privada/incógnito y prueba cada página y cada enlace.
+8. Para actualizar el sitio, sube los archivos HTML/CSS modificados al mismo repositorio.
+
+ANTES DE ENVIAR
+- Asegúrate de que el repositorio sea público y la web no pida iniciar sesión.
+- Revisa el enlace, la ortografía y todos los temas.
+- No publiques datos personales innecesarios.

@@ -3,50 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VectorLab | Física 1.º BGU</title>
+
+  <title>VectorLab | Andrey Aguilar</title>
+  <meta name="description" content="Blog escolar de Física sobre vectores, creado por Andrey Aguilar de 1.º D Técnico.">
 
   <style>
-    :root {
-      --azul: #38a6e8;
-      --celeste: #eaf7ff;
-      --texto: #243447;
-      --blanco: #ffffff;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --azul: #168bd2;
+      --celeste: #eaf7ff;
+      --fondo: #f8fbff;
+      --texto: #243447;
+      --gris: #65778a;
+      --blanco: #ffffff;
+      --borde: #dcebf6;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f7fbff;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
       color: var(--texto);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       background: var(--blanco);
-      padding: 22px 8%;
+      border-bottom: 1px solid var(--borde);
+      padding: 18px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
-      border-bottom: 1px solid #dceefa;
+      gap: 15px;
     }
 
     .logo {
-      color: var(--azul);
       font-size: 27px;
       font-weight: bold;
+      color: var(--azul);
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     nav a {
-      text-decoration: none;
       color: var(--texto);
-      margin-left: 18px;
+      text-decoration: none;
       font-size: 14px;
     }
 
@@ -56,13 +71,25 @@
 
     .hero {
       text-align: center;
-      padding: 75px 20px;
-      background: linear-gradient(135deg, #eaf7ff, #ffffff);
+      padding: 85px 20px;
+      background: linear-gradient(135deg, #e8f6ff, #ffffff);
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-radius: 25px;
+      padding: 6px 15px;
+      color: var(--azul);
+      font-size: 13px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(32px, 6vw, 52px);
-      margin-bottom: 15px;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.2;
+      margin-bottom: 20px;
     }
 
     .hero h1 span {
@@ -70,89 +97,143 @@
     }
 
     .hero p {
-      max-width: 600px;
-      margin: 0 auto 20px;
-      color: #60758a;
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: var(--gris);
     }
 
-    .autor {
-      display: inline-block;
+    .datos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .dato {
       background: white;
-      padding: 10px 18px;
-      border: 1px solid #dceefa;
-      border-radius: 20px;
-      margin-top: 8px;
+      border: 1px solid var(--borde);
+      padding: 9px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .boton {
+      display: inline-block;
+      background: var(--azul);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .boton:hover {
+      background: #0876b9;
     }
 
     .seccion {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: auto;
-      padding: 55px 20px;
+      padding: 65px 22px;
     }
 
-    .seccion h2 {
+    .titulo-seccion {
       text-align: center;
-      margin-bottom: 12px;
-      font-size: 30px;
+      font-size: 31px;
+      margin-bottom: 10px;
     }
 
-    .descripcion {
+    .subtitulo {
       text-align: center;
-      color: #718096;
-      margin-bottom: 30px;
+      color: var(--gris);
+      margin-bottom: 35px;
     }
 
     .temas {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
     .tarjeta {
-      background: white;
-      padding: 24px;
-      border: 1px solid #e0edf7;
-      border-radius: 15px;
-    }
-
-    .tarjeta h3 {
-      color: #238bc9;
-      margin-bottom: 10px;
-    }
-
-    .tarjeta p {
-      color: #60758a;
-      font-size: 14px;
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-radius: 14px;
+      padding: 25px;
     }
 
     .numero {
       display: inline-block;
+      color: var(--azul);
       background: var(--celeste);
-      color: #238bc9;
-      padding: 4px 10px;
-      border-radius: 8px;
-      margin-bottom: 12px;
+      padding: 4px 11px;
+      border-radius: 7px;
+      font-size: 13px;
       font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .tarjeta h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .tarjeta p {
+      color: var(--gris);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .nota {
+      background: var(--celeste);
+      border: 1px solid var(--borde);
+      padding: 18px;
+      border-radius: 12px;
+      margin-top: 25px;
+      color: #36546c;
+      font-size: 14px;
     }
 
     .sobre {
       background: white;
-      border-top: 1px solid #e0edf7;
-      border-bottom: 1px solid #e0edf7;
+      border-top: 1px solid var(--borde);
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .sobre-contenido {
+      max-width: 750px;
+      margin: auto;
       text-align: center;
     }
 
-    .sobre p {
-      max-width: 650px;
-      margin: 15px auto;
-      color: #60758a;
+    .sobre-contenido p {
+      color: var(--gris);
+      margin-top: 15px;
+    }
+
+    .firma {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 15px 25px;
+      border: 1px solid var(--borde);
+      background: var(--fondo);
+      border-radius: 12px;
+    }
+
+    .firma strong {
+      color: var(--azul);
     }
 
     footer {
       text-align: center;
-      padding: 25px;
+      padding: 30px 20px;
+      color: var(--gris);
       font-size: 13px;
-      color: #718096;
+    }
+
+    footer strong {
+      color: var(--azul);
     }
 
     @media (max-width: 600px) {
@@ -161,12 +242,15 @@
       }
 
       nav {
-        text-align: center;
+        justify-content: center;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 5px 8px;
+      .hero {
+        padding: 60px 18px;
+      }
+
+      .seccion {
+        padding: 45px 18px;
       }
     }
   </style>
@@ -175,91 +259,142 @@
 <body>
 
   <header>
-    <div class="logo">VectorLab.</div>
+    <a class="logo" href="#inicio">VectorLab.</a>
 
     <nav>
       <a href="#inicio">Inicio</a>
-      <a href="#temas">Temas</a>
-      <a href="#autor">Acerca de mí</a>
+      <a href="#temas">Mis temas</a>
+      <a href="#autor">Sobre mí</a>
     </nav>
   </header>
 
   <main>
+
     <section class="hero" id="inicio">
+      <div class="etiqueta">BLOG ESCOLAR DE FÍSICA</div>
+
       <h1>Explora el mundo de los <span>vectores</span></h1>
 
       <p>
-        Un espacio educativo para aprender Física,
-        descubrir conceptos y comprender cómo funcionan
-        los vectores en nuestro mundo.
+        Bienvenido a VectorLab, un espacio educativo para
+        aprender Física, comprender los vectores y descubrir
+        cómo se aplican en situaciones de la vida cotidiana.
       </p>
 
-      <div class="autor">
-        Creado por: <strong>TU NOMBRE</strong>
+      <a class="boton" href="#temas">Explorar los temas</a>
+
+      <div class="datos">
+        <div class="dato">Estudiante: <strong>Andrey Aguilar</strong></div>
+        <div class="dato">Curso: <strong>1.º D Técnico</strong></div>
+        <div class="dato">Asignatura: <strong>Física</strong></div>
       </div>
     </section>
 
     <section class="seccion" id="temas">
-      <h2>Mis temas de Física</h2>
-      <p class="descripcion">
-        Seis temas para aprender sobre vectores.
+      <h2 class="titulo-seccion">Mis temas de Física</h2>
+
+      <p class="subtitulo">
+        Seis temas para aprender y comprender los vectores.
       </p>
 
       <div class="temas">
-        <article class="tarjeta">
-          <span class="numero">01</span>
+
+        <article class="tarjeta" id="tema1">
+          <span class="numero">TEMA 01</span>
           <h3>Coordenadas rectangulares</h3>
-          <p>Escribe aquí tu explicación sobre las coordenadas rectangulares.</p>
+          <p>
+            Escribe aquí tu explicación sobre el plano cartesiano,
+            los ejes X e Y y la ubicación de puntos.
+          </p>
+          <small>Autor: Andrey Aguilar · 1.º D Técnico</small>
         </article>
 
-        <article class="tarjeta">
-          <span class="numero">02</span>
+        <article class="tarjeta" id="tema2">
+          <span class="numero">TEMA 02</span>
           <h3>Magnitud de un vector</h3>
-          <p>Escribe aquí tu explicación sobre la magnitud de un vector.</p>
+          <p>
+            Escribe aquí qué es la magnitud de un vector
+            y cómo se calcula a partir de sus componentes.
+          </p>
+          <small>Autor: Andrey Aguilar · 1.º D Técnico</small>
         </article>
 
-        <article class="tarjeta">
-          <span class="numero">03</span>
+        <article class="tarjeta" id="tema3">
+          <span class="numero">TEMA 03</span>
           <h3>Dirección y sentido</h3>
-          <p>Escribe aquí tu explicación sobre la dirección y el sentido.</p>
+          <p>
+            Explica la diferencia entre dirección y sentido,
+            e incluye ejemplos de la vida cotidiana.
+          </p>
+          <small>Autor: Andrey Aguilar · 1.º D Técnico</small>
         </article>
 
-        <article class="tarjeta">
-          <span class="numero">04</span>
+        <article class="tarjeta" id="tema4">
+          <span class="numero">TEMA 04</span>
           <h3>Suma de vectores</h3>
-          <p>Escribe aquí tu explicación sobre cómo sumar vectores.</p>
+          <p>
+            Escribe los métodos para sumar vectores
+            y agrega un ejemplo resuelto.
+          </p>
+          <small>Autor: Andrey Aguilar · 1.º D Técnico</small>
         </article>
 
-        <article class="tarjeta">
-          <span class="numero">05</span>
+        <article class="tarjeta" id="tema5">
+          <span class="numero">TEMA 05</span>
           <h3>Resta de vectores</h3>
-          <p>Escribe aquí tu explicación sobre cómo restar vectores.</p>
+          <p>
+            Explica cómo restar vectores y cómo representar
+            gráficamente el vector resultante.
+          </p>
+          <small>Autor: Andrey Aguilar · 1.º D Técnico</small>
         </article>
 
-        <article class="tarjeta">
-          <span class="numero">06</span>
+        <article class="tarjeta" id="tema6">
+          <span class="numero">TEMA 06</span>
           <h3>Componentes de un vector</h3>
-          <p>Escribe aquí tu explicación sobre las componentes vectoriales.</p>
+          <p>
+            Describe las componentes horizontal y vertical,
+            sus fórmulas y algunos ejemplos.
+          </p>
+          <small>Autor: Andrey Aguilar · 1.º D Técnico</small>
         </article>
+
+      </div>
+
+      <div class="nota">
+        <strong>Nota:</strong> Este blog es un proyecto académico
+        de Andrey Aguilar, estudiante de 1.º D Técnico.
+        Los espacios de los temas están preparados para añadir
+        explicaciones, ejercicios e ilustraciones propias.
       </div>
     </section>
 
     <section class="sobre" id="autor">
-      <div class="seccion">
-        <h2>Acerca de mí</h2>
+      <div class="seccion sobre-contenido">
+        <h2 class="titulo-seccion">Sobre el creador</h2>
+
         <p>
           ¡Hola! Soy <strong>Andrey Aguilar</strong>,
-          estudiante de 1.º BGU. Este blog fue creado
-          para compartir mis aprendizajes de Física
+          estudiante de <strong>1.º D Técnico</strong>.
+          Creé VectorLab como un blog escolar para organizar
+          mis aprendizajes de Física y explicar los vectores
+          de una manera sencilla y ordenada.
         </p>
+
+        <div class="firma">
+          <strong>Andrey Aguilar</strong><br>
+          1.º D Técnico<br>
+          Proyecto escolar de Física
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer>
-    © 2026 VectorLab · Física de 1.º BGU
-    <br>
-    Creado por TU NOMBRE
+    <strong>VectorLab.</strong> · Blog escolar de Física<br>
+    Creado por Andrey Aguilar · 1.º D Técnico<br>
+    © 2026 · Proyecto educativo
   </footer>
 
 </body>
